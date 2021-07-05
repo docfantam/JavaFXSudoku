@@ -6,6 +6,7 @@ import sudoku.problemdomain.SudokuGame;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import static sudoku.problemdomain.SudokuGame.GRID_BOUNDARY;
 
@@ -91,7 +92,7 @@ public class GameLogic {
             xIndex -= 3;
             yIndex++;
         }
-        if(collectionHasRepeats(squares)) return true;
+        if(collectionHasRepeats(square)) return true;
         return false;
     }
 

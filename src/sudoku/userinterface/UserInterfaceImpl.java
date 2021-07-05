@@ -75,7 +75,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
                     thickness,
                     BOARD_X_AND_Y
             );
-
+            root.getChildren().addAll(horizontalLine, verticalLine);
             index++;
         }
     }
