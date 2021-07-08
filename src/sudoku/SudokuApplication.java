@@ -11,11 +11,11 @@ import java.io.IOException;
 public class SudokuApplication extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws IOException {
         IUserInterfaceContract.View uiImpl = new UserInterfaceImpl(primaryStage);
         try {
             SudokuBuildLogic.build(uiImpl);
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             throw e;
         }
