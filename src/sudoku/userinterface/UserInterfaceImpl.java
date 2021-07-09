@@ -39,7 +39,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
     //distance between window and board
     private static final double BOARD_PADDING = 50;
     private static final double BOARD_X_AND_Y = 576;
-    private static final Color WINDOW_BACKGROUND_COLOR = Color.rgb(0, 150, 136);
+    private static final Color WINDOW_BACKGROUND_COLOR = Color.rgb(247, 206, 104);
     private static final Color BOARD_BACKGROUND_COLOR = Color.rgb(224, 242, 241);
     private static final String SUDOKU = "Sudoku";
 
@@ -61,6 +61,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
         drawSudokuBoard(root);
         drawTextFields(root);
         drawGridLines(root);
+        stage.setTitle("JavaFX Sudoku");
         stage.show();
     }
 
@@ -153,7 +154,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
 
     private void drawTitle(Group root) {
         Text title = new Text(235, 690, SUDOKU);
-        title.setFill(Color.WHITE);
+        title.setFill(Color.TOMATO);
         Font titleFont = new Font(43);
         title.setFont(titleFont);
         root.getChildren().add(title);
